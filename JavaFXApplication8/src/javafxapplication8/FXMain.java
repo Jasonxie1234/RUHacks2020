@@ -28,9 +28,8 @@ public class FXMain extends Application
     {
         window = primaryStage;
         
-        //Inital Login scene
+//Login scene
         window.setTitle("Co-Appointment");
-        Label alerts1 = new Label("");
         Label login = new Label("Login");
         Button customer = new Button("Customer Login");
         Button business = new Button("Business Login");
@@ -46,231 +45,166 @@ public class FXMain extends Application
         gridPane0.add(create, 1, 2);
         gridPane0.setHgap(40);
         gridPane0.setVgap(20);
+        
         Scene loginScene = new Scene(gridPane0, 400, 200);
         
-        //Business login scene
-        Label role0 = new Label("Business Login");
-        Label usernameLabel = new Label("Username");
-        TextField usernameField = new TextField();
-        Label passwordLabel = new Label("Password");
-        PasswordField passwordField = new PasswordField();
+//Business login scene
+        Label role1 = new Label("Business Login");
+        Label username0 = new Label("Username:");
+        TextField usernameField0 = new TextField();
+        Label password0 = new Label("Password:");
+        PasswordField passwordField0 = new PasswordField();
         Button businessLogin = new Button("Submit");
-        Button setHours = new Button("Set Hours");
-        Button setCustMax = new Button("Set Max Simultaneous Customers");
-        Button displaySchedule = new Button("Display Schedule");
-        Button back0 = new Button("Back");
+        Button back1 = new Button("Back");
         GridPane gridPane1 = new GridPane();
-        gridPane1.add(role0, 0, 0);
-        gridPane1.add(usernameLabel, 0, 1);
-        gridPane1.add(usernameField, 0, 2);
-        gridPane1.add(passwordLabel, 0, 3);
-        gridPane1.add(passwordField, 0, 4);
+        gridPane1.add(role1, 0, 0);
+        gridPane1.add(username0, 0, 1);
+        gridPane1.add(usernameField0, 0, 2);
+        gridPane1.add(password0, 0, 3);
+        gridPane1.add(passwordField0, 0, 4);
         gridPane1.add(businessLogin, 0, 5);
-        gridPane1.add(setHours, 1, 1);
-        gridPane1.add(setCustMax, 1, 2);
-        gridPane1.add(displaySchedule, 1, 3);
-        gridPane1.add(back0, 1, 5);
-        gridPane1.setHgap(40);
-        gridPane1.setVgap(5);
+        gridPane1.add(back1, 1, 5);
+        
         Scene businessLoginScene = new Scene(gridPane1, 500, 500);
         
-        //Business logged in scene
-        Label role1 = new Label("Business Logged In");
-        Label alerts2 = new Label("");
+//Business logged in scene
+        Label role2 = new Label("Business Logged In");
         Button display = new Button("Display Appointments");
         Button setHoursButton = new Button("Set Hours");
         Button setMaxCust = new Button("Set max simultaneous visits");
-        Button logout1 = new Button("Logout");
+        Button logout2 = new Button("Logout");
         GridPane gridPane2 = new GridPane();
-        gridPane2.add(role1, 0, 0);
+        gridPane2.add(role2, 0, 0);
         gridPane2.add(display, 0, 1);
         gridPane2.add(setHoursButton, 0, 2);
         gridPane2.add(setMaxCust, 0, 3);
-        gridPane2.add(logout1, 2, 4);
-        gridPane2.add(alerts2, 0, 5);
-        gridPane2.setHgap(60);
-        gridPane2.setVgap(10);
+        gridPane2.add(logout2, 2, 4);
+        
         Scene businessLoggedInScene = new Scene(gridPane2, 600, 250);
         
-        //Customer login scene
-        
-        
-        //Customer logged in scene
-        Label role2 = new Label("");
-        Label alerts3 = new Label();
-        StringProperty usernameBind = new SimpleStringProperty();
-        role2.textProperty().bind(usernameBind);
-        Label depositLabel = new Label("Deposit:");
-        TextField depositField = new TextField("");
-        Button depositButton = new Button("Deposit");
-        Label withdrawLabel = new Label("Withdraw:");
-        TextField withdrawField = new TextField("");
-        Button withdrawButton = new Button("Withdraw");
-        Label balanceLabel = new Label("Balance:");
-        Label balanceField = new Label("");
-        Button balanceButton = new Button("Get Balance");
-        Label OPLabel = new Label("Online Purchase:");
-        TextField OPField = new TextField("");
-        Button OPButton = new Button("Purchase");
-        Button logout2 = new Button("Logout");
+//Customer login scene
+        Label role3 = new Label("Customer Login");
+        Label username1 = new Label("Username:");
+        TextField usernameField1 = new TextField();
+        Label password1 = new Label("Password:");
+        PasswordField passwordField1 = new PasswordField();
+        Button submit3 = new Button("Submit");
+        Button back3 = new Button("Back");
         GridPane gridPane3 = new GridPane();
-        gridPane3.add(role2, 0, 0);
-        gridPane3.add(depositLabel, 0, 1);
-        gridPane3.add(depositField, 0, 2);
-        gridPane3.add(depositButton, 0, 3);
-        gridPane3.add(withdrawLabel, 1, 1);
-        gridPane3.add(withdrawField, 1, 2);
-        gridPane3.add(withdrawButton, 1, 3);
-        gridPane3.add(OPLabel, 2, 1);
-        gridPane3.add(OPField, 2, 2);
-        gridPane3.add(OPButton, 2, 3);
-        gridPane3.add(balanceLabel, 3, 1);
-        gridPane3.add(balanceField, 3, 2);
-        gridPane3.add(balanceButton, 3, 3);
-        gridPane3.add(logout2, 3, 5);
-        gridPane3.add(alerts3, 0, 4, 3, 3);
-        gridPane3.setHgap(25);
-        gridPane3.setVgap(10);
-        Scene customerLoggedInScene = new Scene(gridPane3, 750, 250);
+        gridPane3.add(role3, 0, 0);
+        gridPane3.add(username1, 0, 1);
+        gridPane3.add(usernameField1, 0, 2);
+        gridPane3.add(password1, 0, 3);
+        gridPane3.add(passwordField1, 0, 4);
+        gridPane3.add(submit3, 0, 5);
+        gridPane3.add(back3, 1, 5);
+        
+        Scene customerLoginScene = new Scene(gridPane3, 500, 500);
+        
+        
+//Customer logged in scene
+        Label role4 = new Label("Logged In");
+        TextField searchField = new TextField("Search for Business");
+        Button search = new Button("Search");
+        Button settings = new Button("User Settings");
+        Button logout4 = new Button("Logout");
+        GridPane gridPane4 = new GridPane();
+        gridPane4.add(role4, 0, 0);
+        gridPane4.add(searchField, 0, 1);
+        gridPane4.add(search, 0, 2);
+        gridPane4.add(settings, 1, 2);
+        gridPane4.add(logout4, 1, 3);
+        
+        Scene customerLoggedInScene = new Scene(gridPane4, 500, 500);
+       
         
         window.setScene(loginScene);
-        window.show();
+        window.show();       
         
-//Login Scene
+        
+//Login Scene Actions
         customer.setOnAction(event ->
         {        
-            window.setTitle("JA Bank : Manager Profile");
-            window.setScene(customerLoggedInScene);
-            window.show();
+            window.setScene(customerLoginScene);
         });
         
         business.setOnAction(event ->
         {
-            window.setTitle("Business Login");
             window.setScene(businessLoginScene);
-            window.show();
+        });
+        
+        claim.setOnAction(event ->
+        {
+            //direct to verify phone
+        });
+        
+        create.setOnAction(event ->
+        {
+            //create customer account
         });
         
         exit.setOnAction(event ->
         {
-            for (Customer item : customerArray)
-            {
-                try{
-                    PrintWriter pw = new PrintWriter(path+item.getUsername()+".txt");
-                        pw.println(item.getUsername());
-                        pw.println(item.getPassword());
-                        pw.print(String.valueOf(item.getBalance()));
-                        pw.close();
-                } catch (IOException e) {
-                    alerts1.setText("Error initializing stream");
-                }
-            }
             System.exit(0);
         });
         
-//Store Scene
-        logout1.setOnAction(event ->
+//Business Login Scene Actions
+        businessLogin.setOnAction(event ->
         {
-           window.setTitle("Co-Appointment");
+            //check account info and sign in
+            //iff account info is good,
+            usernameField0.setText("");
+            passwordField0.setText("");
+            window.setScene(businessLoggedInScene);
+        });
+        
+        back1.setOnAction(event ->
+        {
+            window.setScene(loginScene);
+        });
+        
+        
+//Business Logged In Scene Actions
+        logout2.setOnAction(event ->
+        {
            window.setScene(loginScene);
         });
         
-//Customer Scene
-        depositButton.setOnAction(event ->
+//Customer Login Scene Actions
+        submit3.setOnAction(event ->
         {
-            for (Customer item : customerArray)
-            {   
-                if (role2.getText().equals(item.getUsername()))
-                {
-                    if (Double.parseDouble(depositField.getText()) > 0)
-                    {
-                        item.deposit(Double.parseDouble(depositField.getText()));
-                        alerts3.setText("Deposited: " + depositField.getText());
-                    }
-                    else
-                        alerts3.setText("Value must be positive");
-                }
-            }
+            //check if account info is good
+            //iff account info is good
+            usernameField1.setText("");
+            passwordField1.setText("");
+            window.setScene(customerLoggedInScene);
+        });
+        
+        back3.setOnAction(event ->
+        {
+            window.setScene(loginScene);
         });
 
-        withdrawButton.setOnAction(event ->
-        {
-            for (Customer item : customerArray)
-            {   
-                if (role2.getText().equals(item.getUsername()))
-                {
-                    if (Double.parseDouble(withdrawField.getText()) <= item.account.balance)
-                    {
-                        item.withdraw(Double.parseDouble(withdrawField.getText()));
-                        alerts3.setText("Withdrew: " + withdrawField.getText());
-                    }
-                    else
-                        alerts3.setText("Value cannot be larger than balance");
-                }
-            }
-        });
 
-        balanceButton.setOnAction(event ->
+//Customer Logged In Scene Actions
+        search.setOnAction(event ->
         {
-            for (Customer item : customerArray)
-            {   
-                if (role2.getText().equals(item.getUsername()))
-                    balanceField.setText("" + item.getBalance());
-            }
+            //use google places API to search places
         });
-
-        OPButton.setOnAction(event ->
+        
+        settings.setOnAction(event ->
         {
-            for (Customer item : customerArray)
-            {   
-                if ((role2.getText().equals(item.getUsername()) && (Double.parseDouble(OPField.getText()) >= 50) && (Double.parseDouble(withdrawField.getText()) <= item.account.balance)))
-                {
-                    alerts3.setText("Purchased");
-                }
-                else
-                    alerts3.setText("Online purchase must be greater than $50, or funds unavailable");
-            }
+            //open user settings scene
         });
-
-        logout2.setOnAction(event ->
+        
+        logout4.setOnAction(event ->
         {
-           depositField.setText("enter $ amount");
-           withdrawField.setText("enter $ amount");
-           OPField.setText("enter $ amount");
-           balanceField.setText("");
-           alerts3.setText("");
-           window.setTitle("JA Bank : Login");
-           window.setScene(loginScene);
+            window.setScene(loginScene);
         });
     }
 
-    public static void main(String[] args) {
-        
-      try {
-            path = (new File(".").getCanonicalPath())+"\\customers\\";
-            File dir = new File(path);
-      
-            for (File file : dir.listFiles())
-            {
-                List<String> allLines = Files.readAllLines(Paths.get(path + file.getName()));
-                String oldUsername = allLines.get(0);
-                String oldPassword = allLines.get(1);
-                double oldBalance = Double.parseDouble(allLines.get(2));
-                customerArray.add(new Customer(oldUsername, oldPassword));
-                for (Customer item : customerArray)
-                {
-                    if (item.getUsername().equals(oldUsername))
-                        item.account.balance = oldBalance;
-                }
-            }
-        } catch (EOFException e) {
-            System.out.println("End of file");
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found");
-        } catch (IOException e) {
-            System.out.println("IO error");
-            e.printStackTrace();
-        } 
+    public static void main(String[] args)
+    {
         Application.launch(args);
     }
 }
